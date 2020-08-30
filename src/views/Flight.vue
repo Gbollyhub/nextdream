@@ -2,109 +2,20 @@
 <div>
    <Nav></Nav>
   <div class="content">
-   <div class="about-sec">
-     <v-layout row wrap>
- <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
-      <center>
-           <img src="../assets/img1.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="../assets/img1.jpg" alt="" width="300px" class="hidden-md-and-up">
-        </center>
-      </v-card>
-     </v-flex>
-      <v-flex xs12 sm12 md6>
-      <v-card flat class="about-text" color="transparent">
-        <h1 class="home-header">About the Company</h1>
-      <br>
-        <p class="home-sub">At Next Dream luxury travels, we excel at helping you get your vacation planned.
-           Not just any vacation,
-      but exceptional vacations filled with inspiring and life-enriching experiences. 
-      We offer the very best in 
-      bespoke luxury safaris 
-     and holidays to any location to us it is not just about selling holidays is about working with our 
-     clients to ensure that their trip is an unforgettable experience.
-Be it a honeymoon, a family holiday or simply a desire to travel, our fundamental principle is to create
- a tailor-made itinerary based on your interests and expectations that will result in memories that will 
- last a lifetime. 
-          </p>
-          <p class="home-sub">
-            Our site is a one-stop shop for all things cruise related, yacht and private jet booking flight booking, car and bus hire, hotel reservation. Should you ever need the advice of an expert, our
-             dedicated sales and service staff are available via phone and email ready to assist you in any way they can.
-          </p>
-      </v-card>
-     </v-flex>
-     </v-layout> 
-   </div>
-
-   <div class="service-sec">
-     <h1 class="home-header">Our Services</h1>
-      
-        <p class="home-sub">We Provide “wow” services for the most sophisticated travelers with a personalized touch. 
-          </p>
-    <v-layout row wrap>
-    <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card1" flat  color="transparent" >
+    <div class="flight-sec">
+       <h1 class="home-header">Find Cheap Tickets</h1>
+       <p class="home-sub">
+        Offering you comfort at your utmost convenience. Private travel is made easy through next dream luxury travels services. Contact us today for more details. Next Dream luxury travels is a flight broker and as such arranges carriage by air on behalf of its customers by chartering aircraft from third-party aircraft operators as the agent of its customers. We work with the industry’s leading suppliers, and that gives us access to special rates that we turn into big savings for you
+       </p>
+         <v-layout row wrap>
+    <v-flex class="serv-flex" xs12 sm12 md3 v-for="post in Deals" :key="post.id">
+     <v-card  flat class="deals-card" v-bind:style="{backgroundImage: post.Src, backgroundPosition: Imagepos }">
      </v-card>
-     <p class="deals-text">Flight</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card2" flat></v-card>
-     <p class="deals-text">Visa</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card3" flat></v-card>
-     <p class="deals-text">Travel Deals</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card4" flat></v-card>
-      <p class="deals-text">Boat Cruise</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card5" flat></v-card>
-      <p class="deals-text">Private Jet</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card6" flat></v-card>
-      <p class="deals-text">Car Hire</p>
+     <p class="deals-text"> {{post.Details}} | </p>
+     <p style="color:white"> {{ post.Title }}</p>
     </v-flex>
     </v-layout>
-   </div>
-  
-   <div class="Flight-sec">
-         <v-layout row wrap>
- <v-flex xs12 sm12 md6>
-      <v-card flat class="about-text"  color="transparent">
-      <h1 class="home-header">Our Mission, Vision and Value</h1>
-      <br>
-        <p class="home-sub">
-          At Next Dream Luxury Travels, we take pride in your comfort all through your travelling experience.
-
-Our mission is to give an unforgettable travel experience with complete ease and comfort.
-
-Our vision is to help you travel by planing all your travelling events
-
-from visas to hotel accommodation
-and fun activities during your trip we got you all covered on that.
-
-The only value we have is you our esteemed customer.
-
-Book a ticket with us today and enjoy your next trip.
-          </p>
-          
-          <br>
-      </v-card>
-     </v-flex>
-      <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
-        <center>
-           <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="300px" class="hidden-md-and-up">
-        </center>
-       
-      </v-card>
-     </v-flex>
-     </v-layout> 
-    </div>
+     </div>
 <div class="book-now">
     <v-layout row wrap>
  <v-flex xs12 sm12 md6>
@@ -185,9 +96,9 @@ font-family: "Gothic-Condensed-Bold";
 src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 }
 .meal-btn {width: 15px;height: 15px;font-size:10px;}
-.deals-text {padding-bottom:10px;margin-top:10px;font-size:11px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
+.deals-text {padding-bottom:10px;margin-top:10px;font-size:10px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
 .book-now {background: #cd9f58; color:white;height: auto;padding: 30px 50px 30px 50px;}
-.flight-sec {padding: 50px;}
+.flight-sec {padding: 150px 50px 50px 50px;}
 .service-sec{ padding: 50px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 10px 0px 10px; margin-top:20px;}
@@ -206,7 +117,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .col-btn{background: #cd9f58;color: white;padding-top: 30px;}
 .col-text {font-family: "Arial";font-size:10px; font-weight: 800;}
 .col-1 {height:auto;padding: 5px 30px;font-family: "Gothic-Normal-Bold"; text-align: center; background: white;}
-.about-sec {padding: 150px 50px 0px 0px}
+.about-sec {padding: 50px 50px 0px 0px}
 .banner-col1{padding: 150px 0px 0px 0px }
 .banner-col2 {padding: 30px;}
 .banner-sub {color: white; font-size: 16px;}
@@ -228,9 +139,9 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 
  @media (max-width: 767px) {
 .meal-btn {width: 15px;height: 15px;font-size:10px;}
-.deals-text {padding-bottom:10px;margin-top:10px;font-size:11px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
+.deals-text {padding-bottom:10px;margin-top:10px;font-size:10px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
 .book-now {background: #cd9f58; color:white;height: auto;padding: 30px 50px 30px 50px;}
-.flight-sec {padding: 20px;}
+.flight-sec {padding: 120px 20px 20px 20px;}
 .service-sec{ padding: 20px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 0px 0px 0px; margin-top:20px;}
@@ -241,7 +152,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/jet.jpg")}
 .serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("https://spmhire.com/wp-content/uploads/revslider/cuurent-slider-duplicate-two/spmhire.com_.jpg")}
 .home-btn {font-family: "Arial";font-size:10px; font-weight: 800; }
-.about-image { padding: 10px;}
+.about-image { padding: 20px;}
 .about-text{ padding: 20px;}
 .home-header{ font-size:40px;font-family: "Gothic-Condensed"; color: #ffffff;}
 .home-sub { font-size:14px;color: #ffffff;text-align: justify;}
@@ -249,7 +160,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .col-btn{background: #cd9f58;color: white;padding-top: 30px;}
 .col-text {font-family: "Arial";font-size:10px; font-weight: 800;}
 .col-1 {height:auto;padding: 5px 30px;font-family: "Gothic-Normal-Bold"; text-align: center; background: white;}
-.about-sec {padding:100px 0px 0px 0px}
+.about-sec {padding: 0px 0px 0px 0px}
 .banner-col1{padding: 150px 0px 0px 0px }
 .banner-col2 {padding: 30px;}
 .banner-sub {color: white; font-size: 16px;}
@@ -267,9 +178,9 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 
  @media (max-width: 479px) {
 .meal-btn {width: 15px;height: 15px;font-size:10px;}
-.deals-text {padding-bottom:10px;margin-top:10px;font-size:11px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
+.deals-text {padding-bottom:10px;margin-top:10px;font-size:10px;text-transform: uppercase; color: #ffffff; border-bottom: 1px solid #dbdbdb; }
 .book-now {background: #cd9f58; color:white;height: auto;padding: 30px 50px 30px 50px;}
-.flight-sec {padding: 20px;}
+.flight-sec {padding: 120px 20px 20px 20px;}
 .service-sec{ padding: 20px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 0px 0px 0px; margin-top:20px;}
@@ -280,7 +191,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/jet.jpg")}
 .serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("https://spmhire.com/wp-content/uploads/revslider/cuurent-slider-duplicate-two/spmhire.com_.jpg")}
 .home-btn {font-family: "Arial";font-size:10px; font-weight: 800; }
-.about-image { padding: 10px;}
+.about-image { padding: 20px;}
 .about-text{ padding: 20px;}
 .home-header{ font-size:40px;font-family: "Gothic-Condensed"; color: #ffffff;}
 .home-sub { font-size:14px;color: #ffffff;text-align: justify;}
@@ -288,7 +199,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .col-btn{background: #cd9f58;color: white;padding-top: 30px;}
 .col-text {font-family: "Arial";font-size:10px; font-weight: 800;}
 .col-1 {height:auto;padding: 5px 30px;font-family: "Gothic-Normal-Bold"; text-align: center; background: white;}
-.about-sec {padding:100px 0px 0px 0px}
+.about-sec {padding: 0px 0px 0px 0px}
 .banner-col1{padding: 150px 0px 0px 0px }
 .banner-col2 {padding: 30px;}
 .banner-sub {color: white; font-size: 16px;}

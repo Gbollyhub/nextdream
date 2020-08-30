@@ -5,31 +5,22 @@
    <div class="about-sec">
      <v-layout row wrap>
  <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
-      <center>
-           <img src="../assets/img1.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="../assets/img1.jpg" alt="" width="300px" class="hidden-md-and-up">
+      <v-card flat class="about-image" color="transparent">
+       <center>
+           <img src="https://fortunedotcom.files.wordpress.com/2015/01/158315398.jpg" alt="" width="500px" class="hidden-sm-and-down" >
+         <img src="https://fortunedotcom.files.wordpress.com/2015/01/158315398.jpg" alt="" width="300px" class="hidden-md-and-up">
         </center>
       </v-card>
      </v-flex>
       <v-flex xs12 sm12 md6>
       <v-card flat class="about-text" color="transparent">
-        <h1 class="home-header">About the Company</h1>
+        <h1 class="home-header">Luxury Flights</h1>
       <br>
-        <p class="home-sub">At Next Dream luxury travels, we excel at helping you get your vacation planned.
-           Not just any vacation,
-      but exceptional vacations filled with inspiring and life-enriching experiences. 
-      We offer the very best in 
-      bespoke luxury safaris 
-     and holidays to any location to us it is not just about selling holidays is about working with our 
-     clients to ensure that their trip is an unforgettable experience.
-Be it a honeymoon, a family holiday or simply a desire to travel, our fundamental principle is to create
- a tailor-made itinerary based on your interests and expectations that will result in memories that will 
- last a lifetime. 
-          </p>
-          <p class="home-sub">
-            Our site is a one-stop shop for all things cruise related, yacht and private jet booking flight booking, car and bus hire, hotel reservation. Should you ever need the advice of an expert, our
-             dedicated sales and service staff are available via phone and email ready to assist you in any way they can.
+        <p class="home-sub">Offering you comfort at your utmost convenience.
+Private travel is made easy through next dream luxury travels services. Contact us today for more details.
+next dream luxury travels is a flight broker and as such arranges carriage by air on behalf of its customers by chartering aircraft
+from third-party aircraft operators as agent of its customers.
+We work with the industry’s leading suppliers, and that gives us access to special rates that we turn into big savings for you
           </p>
       </v-card>
      </v-flex>
@@ -37,13 +28,14 @@ Be it a honeymoon, a family holiday or simply a desire to travel, our fundamenta
    </div>
 
    <div class="service-sec">
-     <h1 class="home-header">Our Services</h1>
+     <h1 class="home-header">Our Fleet</h1>
       
-        <p class="home-sub">We Provide “wow” services for the most sophisticated travelers with a personalized touch. 
+        <p class="home-sub">As a leading luxury tour operator in Indochina we are offering a large number of bespoke holiday packages within Vietnam, Thailand, Laos, Cambodia, and Myanmar (Burma). 
+            Plan your next Holiday in Southeast Asia choosing one of our luxury tours and explore the unlimited surprises. 
           </p>
     <v-layout row wrap>
     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card1" flat  color="transparent" >
+     <v-card class="serv-card1" flat >
      </v-card>
      <p class="deals-text">Flight</p>
     </v-flex>
@@ -55,56 +47,8 @@ Be it a honeymoon, a family holiday or simply a desire to travel, our fundamenta
      <v-card class="serv-card3" flat></v-card>
      <p class="deals-text">Travel Deals</p>
     </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card4" flat></v-card>
-      <p class="deals-text">Boat Cruise</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card5" flat></v-card>
-      <p class="deals-text">Private Jet</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card6" flat></v-card>
-      <p class="deals-text">Car Hire</p>
-    </v-flex>
     </v-layout>
    </div>
-  
-   <div class="Flight-sec">
-         <v-layout row wrap>
- <v-flex xs12 sm12 md6>
-      <v-card flat class="about-text"  color="transparent">
-      <h1 class="home-header">Our Mission, Vision and Value</h1>
-      <br>
-        <p class="home-sub">
-          At Next Dream Luxury Travels, we take pride in your comfort all through your travelling experience.
-
-Our mission is to give an unforgettable travel experience with complete ease and comfort.
-
-Our vision is to help you travel by planing all your travelling events
-
-from visas to hotel accommodation
-and fun activities during your trip we got you all covered on that.
-
-The only value we have is you our esteemed customer.
-
-Book a ticket with us today and enjoy your next trip.
-          </p>
-          
-          <br>
-      </v-card>
-     </v-flex>
-      <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
-        <center>
-           <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="300px" class="hidden-md-and-up">
-        </center>
-       
-      </v-card>
-     </v-flex>
-     </v-layout> 
-    </div>
 <div class="book-now">
     <v-layout row wrap>
  <v-flex xs12 sm12 md6>
@@ -263,6 +207,8 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
   background-size: cover;
   background-position: center;
   }
+
+
  }
 
  @media (max-width: 479px) {

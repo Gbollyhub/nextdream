@@ -5,31 +5,22 @@
    <div class="about-sec">
      <v-layout row wrap>
  <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
+      <v-card flat class="about-image" color="transparent">
       <center>
-           <img src="../assets/img1.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="../assets/img1.jpg" alt="" width="300px" class="hidden-md-and-up">
+           <img src="https://cdn.smemarkethub.com/indulgencetravels/sme_azr-1544007931000Christmas_Lagos_Dinner_Cruise_" alt="" width="500px" class="hidden-sm-and-down" >
+         <img src="https://cdn.smemarkethub.com/indulgencetravels/sme_azr-1544007931000Christmas_Lagos_Dinner_Cruise_" alt="" width="300px" class="hidden-md-and-up">
         </center>
       </v-card>
      </v-flex>
       <v-flex xs12 sm12 md6>
       <v-card flat class="about-text" color="transparent">
-        <h1 class="home-header">About the Company</h1>
+        <h1 class="home-header">A Wonderful Experience</h1>
       <br>
-        <p class="home-sub">At Next Dream luxury travels, we excel at helping you get your vacation planned.
-           Not just any vacation,
-      but exceptional vacations filled with inspiring and life-enriching experiences. 
-      We offer the very best in 
-      bespoke luxury safaris 
-     and holidays to any location to us it is not just about selling holidays is about working with our 
-     clients to ensure that their trip is an unforgettable experience.
-Be it a honeymoon, a family holiday or simply a desire to travel, our fundamental principle is to create
- a tailor-made itinerary based on your interests and expectations that will result in memories that will 
- last a lifetime. 
-          </p>
-          <p class="home-sub">
-            Our site is a one-stop shop for all things cruise related, yacht and private jet booking flight booking, car and bus hire, hotel reservation. Should you ever need the advice of an expert, our
-             dedicated sales and service staff are available via phone and email ready to assist you in any way they can.
+        <p class="home-sub">In next dream luxury travel company we dedicated to providing our customers with access to great deals on cruise vacations.
+We work with the industry’s leading suppliers, and that gives us access to special rates that we turn into big savings for you.
+our cruise packages are the lowest priced around? So confident that we’re willing to back up all the deals on our site with a price guarantee!
+we’ve helped thousands of people find the perfect cruise packages through our easy-to-navigate website. We provide pages of content to help you
+research all your cruise travel options before booking.
           </p>
       </v-card>
      </v-flex>
@@ -37,74 +28,22 @@ Be it a honeymoon, a family holiday or simply a desire to travel, our fundamenta
    </div>
 
    <div class="service-sec">
-     <h1 class="home-header">Our Services</h1>
+     <h1 class="home-header">Cruise Packages</h1>
       
-        <p class="home-sub">We Provide “wow” services for the most sophisticated travelers with a personalized touch. 
+        <p class="home-sub">Bring family and friends along to enjoy our boat cruise and exclusive private beach house for 1 hour or even a whole day in the interesting city of Lagos Nigeria.
+
+Well affordable packages with love from us at Nextdreamluxurytravels.
           </p>
-    <v-layout row wrap>
-    <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card1" flat  color="transparent" >
+     <v-layout row wrap>
+    <v-flex class="serv-flex" xs12 sm12 md3 v-for="post in Boat" :key="post.id">
+     <v-card  flat class="deals-card" v-bind:style="{backgroundImage: post.Src, backgroundPosition: Imagepos }">
      </v-card>
-     <p class="deals-text">Flight</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card2" flat></v-card>
-     <p class="deals-text">Visa</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card3" flat></v-card>
-     <p class="deals-text">Travel Deals</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card4" flat></v-card>
-      <p class="deals-text">Boat Cruise</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card5" flat></v-card>
-      <p class="deals-text">Private Jet</p>
-    </v-flex>
-     <v-flex class="serv-flex" xs12 sm12 md4>
-     <v-card class="serv-card6" flat></v-card>
-      <p class="deals-text">Car Hire</p>
+     <p class="deals-text"> {{post.Details}} | </p>
+     <p style="color:white"> {{ post.Title }} - ₦{{ post.Price }}</p>
     </v-flex>
     </v-layout>
    </div>
   
-   <div class="Flight-sec">
-         <v-layout row wrap>
- <v-flex xs12 sm12 md6>
-      <v-card flat class="about-text"  color="transparent">
-      <h1 class="home-header">Our Mission, Vision and Value</h1>
-      <br>
-        <p class="home-sub">
-          At Next Dream Luxury Travels, we take pride in your comfort all through your travelling experience.
-
-Our mission is to give an unforgettable travel experience with complete ease and comfort.
-
-Our vision is to help you travel by planing all your travelling events
-
-from visas to hotel accommodation
-and fun activities during your trip we got you all covered on that.
-
-The only value we have is you our esteemed customer.
-
-Book a ticket with us today and enjoy your next trip.
-          </p>
-          
-          <br>
-      </v-card>
-     </v-flex>
-      <v-flex xs12 sm12 md6>
-      <v-card flat class="about-image"  color="transparent">
-        <center>
-           <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="500px" class="hidden-sm-and-down" >
-         <img src="http://www.travelstart.co.za/blog/wp-content/uploads/2014/03/zanzibar-holiday-package.jpg" alt="" width="300px" class="hidden-md-and-up">
-        </center>
-       
-      </v-card>
-     </v-flex>
-     </v-layout> 
-    </div>
 <div class="book-now">
     <v-layout row wrap>
  <v-flex xs12 sm12 md6>
@@ -145,11 +84,11 @@ components: {
       Imagepos: 'center',
       Imagesrc:'url("http://www.wsllpaper.com/wp-content/uploads/2014/02/dubai-630x393.jpg")',
       rating: 4,
-      Deals:[]
+      Boat:[]
     }
   },
   created(){
-    db.collection('Deals').get().then(
+    db.collection('Boat').get().then(
         querySnapshot => {
           querySnapshot.forEach(doc =>{
            const data2 = {
@@ -158,7 +97,7 @@ components: {
              'Price': doc.data().Price,
               'Src' : doc.data().Src
            }
-           this.Deals.push(data2)
+           this.Boat.push(data2)
           })
         } 
       )
@@ -191,12 +130,12 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .service-sec{ padding: 50px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 10px 0px 10px; margin-top:20px;}
-.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://wallpaperaccess.com/full/254361.jpg")}
-.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://www.canon.co.nz/-/media/new-zealand/stories/rach-stewart/rach-stewart-5-lightshouse-over-sea.ashx?la=en-nz")}
-.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://zimmerstunde.at/wp-content/uploads/2017/11/travel.jpg")}
-.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/boat.jpg")}
-.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/jet.jpg")}
-.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("https://spmhire.com/wp-content/uploads/revslider/cuurent-slider-duplicate-two/spmhire.com_.jpg")}
+.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://s-ec.bstatic.com/images/hotel/max1024x768/143/143304246.jpg")}
+.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://cdn.tourcms.com/a/11676/434/1/large.jpg")}
+.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tower_Bridge_London_Feb_2006.jpg/1200px-Tower_Bridge_London_Feb_2006.jpg")}
+.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("https://images.unsplash.com/photo-1545424436-1be2b5c0d0fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")}
+.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("https://lonelyplanetimages.imgix.net/a/g/hi/t/dcf1e0ec17d14df8fac9a7a57c7af63d-china.jpg?sharp=10&vib=20&w=1200")}
+.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("http://africanleadership.co.uk/wp-content/uploads/2015/07/nigeria.jpg")}
 .home-btn {font-family: "Arial";font-size:10px; font-weight: 800; }
 .about-image { padding: 50px;}
 .about-text{ padding: 50px;}
@@ -234,12 +173,12 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .service-sec{ padding: 20px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 0px 0px 0px; margin-top:20px;}
-.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://wallpaperaccess.com/full/254361.jpg")}
-.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://www.canon.co.nz/-/media/new-zealand/stories/rach-stewart/rach-stewart-5-lightshouse-over-sea.ashx?la=en-nz")}
-.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://zimmerstunde.at/wp-content/uploads/2017/11/travel.jpg")}
-.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/boat.jpg")}
-.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/jet.jpg")}
-.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("https://spmhire.com/wp-content/uploads/revslider/cuurent-slider-duplicate-two/spmhire.com_.jpg")}
+.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://s-ec.bstatic.com/images/hotel/max1024x768/143/143304246.jpg")}
+.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://cdn.tourcms.com/a/11676/434/1/large.jpg")}
+.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tower_Bridge_London_Feb_2006.jpg/1200px-Tower_Bridge_London_Feb_2006.jpg")}
+.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("https://images.unsplash.com/photo-1545424436-1be2b5c0d0fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")}
+.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("https://lonelyplanetimages.imgix.net/a/g/hi/t/dcf1e0ec17d14df8fac9a7a57c7af63d-china.jpg?sharp=10&vib=20&w=1200")}
+.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("http://africanleadership.co.uk/wp-content/uploads/2015/07/nigeria.jpg")}
 .home-btn {font-family: "Arial";font-size:10px; font-weight: 800; }
 .about-image { padding: 10px;}
 .about-text{ padding: 20px;}
@@ -256,6 +195,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .banner-header {color: white; font-size: 45px;font-family: "Gothic-Condensed-Bold";}
 .cover{ background: rgba(0, 0, 0, 0.473); padding: 50px 100px 0px 100px;width: 100%;height: 100%;}
 .content{background: #3a3a3a;}
+
 .banner{
   padding: 150px 50px 0px 50px;
   background-image: url("../assets/wik.jpg");
@@ -263,6 +203,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
   background-size: cover;
   background-position: center;
   }
+
  }
 
  @media (max-width: 479px) {
@@ -273,12 +214,12 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .service-sec{ padding: 20px;}
 .deals-card {background-position: center; background-size: cover; height: 230px;}
 .serv-flex{padding: 0px 0px 0px 0px; margin-top:20px;}
-.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://wallpaperaccess.com/full/254361.jpg")}
-.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://www.canon.co.nz/-/media/new-zealand/stories/rach-stewart/rach-stewart-5-lightshouse-over-sea.ashx?la=en-nz")}
-.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://zimmerstunde.at/wp-content/uploads/2017/11/travel.jpg")}
-.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/boat.jpg")}
-.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("../assets/jet.jpg")}
-.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("https://spmhire.com/wp-content/uploads/revslider/cuurent-slider-duplicate-two/spmhire.com_.jpg")}
+.serv-card1 {background-position: center; background-size: cover; height: 300px; background-image: url("https://s-ec.bstatic.com/images/hotel/max1024x768/143/143304246.jpg")}
+.serv-card2 {background-position: center; background-size: cover; height: 300px; background-image: url("https://cdn.tourcms.com/a/11676/434/1/large.jpg")}
+.serv-card3 {background-position: center; background-size: cover; height: 300px; background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Tower_Bridge_London_Feb_2006.jpg/1200px-Tower_Bridge_London_Feb_2006.jpg")}
+.serv-card4 {background-position: center; background-size: cover; height: 300px; background-image: url("https://images.unsplash.com/photo-1545424436-1be2b5c0d0fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80")}
+.serv-card5 {background-position: center; background-size: cover; height: 300px; background-image: url("https://lonelyplanetimages.imgix.net/a/g/hi/t/dcf1e0ec17d14df8fac9a7a57c7af63d-china.jpg?sharp=10&vib=20&w=1200")}
+.serv-card6 {background-position: center; background-size: cover; height: 300px; background-image: url("http://africanleadership.co.uk/wp-content/uploads/2015/07/nigeria.jpg")}
 .home-btn {font-family: "Arial";font-size:10px; font-weight: 800; }
 .about-image { padding: 10px;}
 .about-text{ padding: 20px;}
@@ -295,6 +236,7 @@ src: url("../fonts/Trade-Gothic-LT-Bold-Condensed.ttf");
 .banner-header {color: white; font-size: 45px;font-family: "Gothic-Condensed-Bold";}
 .cover{ background: rgba(0, 0, 0, 0.473); padding: 50px 100px 0px 100px;width: 100%;height: 100%;}
 .content{background: #3a3a3a;}
+
 .banner{
   padding: 150px 50px 0px 50px;
   background-image: url("../assets/wik.jpg");
